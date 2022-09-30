@@ -1,20 +1,28 @@
 :root {
-  --primary-text-color: #212121;
+  --main-text-color: #212121;
   --title-text-color: #757575;
   --accent-text-color: #2196f3;
+  --text-color: #ffffff;
+  --main-beground-color: #ffffff;
+  --beground-color: #f5f4fa;
+  --footer-beground-color: #2f303a;
+  --button-beground-color: #2196f3;
+  --accent-button-beground-color: #188ce8;
+  --accent-button-filtr-beground-color: #2196f3;
 }
-
+/*------------------- Добавить остальные цвета */
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--primary-text-color);
-  background-color: #ffffff;
-}
-ul {
-  list-style: none;
+  color: var(--main-text-color);
+  background-color: var(--main-beground-color);
 }
 a {
   text-decoration: none;
 }
+.list {
+  list-style: none;
+}
+
 /* ------------main-navigation----------- */
 .logo-title {
   font-family: "Raleway";
@@ -23,9 +31,11 @@ a {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #212121;
+  /* на лготип змінні на примінив спеціально, бо це логотип */
 }
 .logo {
   color: #2196f3;
+  /* на лготип змінні на примінив спеціально, бо це логотип */
 }
 /* ------------site-nav----------- */
 .site-nav .link {
@@ -33,10 +43,13 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
+  color: var(--accent-text-color);
+}
+.site-nav .link.current {
   color: var(--accent-text-color);
 }
 /* ------------auth-nav----------- */
@@ -45,7 +58,7 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -66,16 +79,17 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--text-color);
 }
 .button-servise-order {
+  font-family: inherit;
   position: absolute;
   width: 216px;
   height: 50px;
   left: 692px;
   top: 430px;
 
-  background: #2196f3;
+  background: var(--button-beground-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -86,19 +100,24 @@ a {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--text-color);
 }
 .button-servise-order:hover,
 .button-servise-order:focus,
 .button-servise-order:active {
-  background-color: #188ce8;
+  background-color: var(--accent-button-beground-color);
 }
 /*--------------- section -----------------*/
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  white-space: nowrap;
   width: 1px;
   height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   margin: -1px;
 }
 .section-title {
@@ -107,7 +126,7 @@ a {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 .section-subtitle {
   font-weight: 700;
@@ -115,7 +134,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 .section-text {
   font-weight: 400;
@@ -126,10 +145,10 @@ a {
 }
 /*--------------- team -----------------*/
 .section-team {
-  background-color: #f5f4fa;
+  background-color: var(--beground-color);
 }
 .team {
-  background-color: #ffffff;
+  background-color: var(--main-beground-color);
 }
 .team-list {
   font-weight: 500;
@@ -137,7 +156,7 @@ a {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 .team-item {
   font-weight: 400;
@@ -149,7 +168,7 @@ a {
 }
 /*--------------- footer -----------------*/
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-beground-color);
 }
 .addres {
   font-style: normal;
@@ -157,7 +176,7 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--text-color);
 }
 .addres-link {
   font-weight: 400;
@@ -166,23 +185,28 @@ a {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
+.addres-link:hover,
+.addres-link:focus {
+  color: var(--accent-text-color);
+}
 /*--------------- PORTFOLIO -----------------*/
 /*--------------- section-filter -----------------*/
 .button-filter {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-  background: #f5f4fa;
+  color: var(--main-text-color);
+  background: var(--beground-color);
   border-radius: 4px;
 }
 .button-filter:hover,
 .button-filter:active,
 .button-filter:focus {
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--text-color);
+  background-color: var(--accent-button-filtr-beground-color);
 }
 /*--------------- progects -----------------*/
 /* .progect */
@@ -192,7 +216,7 @@ a {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 .progect-subtitle {
   font-weight: 400;
