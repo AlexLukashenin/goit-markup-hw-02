@@ -3,18 +3,20 @@
   --title-text-color: #757575;
   --accent-text-color: #2196f3;
   --text-color: #ffffff;
-  --main-beground-color: #ffffff;
-  --beground-color: #f5f4fa;
-  --footer-beground-color: #2f303a;
-  --button-beground-color: #2196f3;
-  --accent-button-beground-color: #188ce8;
-  --accent-button-filtr-beground-color: #2196f3;
+  --main-background-color: #ffffff;
+  --background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+  --button-background-color: #2196f3;
+  --accent-button-background-color: #188ce8;
+  --accent-button-filter-background-color: #2196f3;
+  --hero-background-color: #2F303A;
+  --addres-link-color:rgba(255, 255, 255, 0.6);
 }
 /*------------------- Добавить остальные цвета */
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-text-color);
-  background-color: var(--main-beground-color);
+  background-color: var(--main-background-color);
 }
 a {
   text-decoration: none;
@@ -25,17 +27,15 @@ a {
 
 /* ------------main-navigation----------- */
 .logo-title {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #212121;
-  /* на лготип змінні на примінив спеціально, бо це логотип */
+  color: var(--main-text-color);
 }
 .logo {
-  color: #2196f3;
-  /* на лготип змінні на примінив спеціально, бо це логотип */
+  color: var(--accent-text-color);
 }
 /* ------------site-nav----------- */
 .site-nav .link {
@@ -58,7 +58,7 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--title-text-color);
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -66,11 +66,7 @@ a {
 }
 /*--------------- section-hero -----------------*/
 .hero {
-  width: 1600px;
-  height: 600px;
-  left: 0px;
-  top: 80px;
-  background: #2f303a;
+  background: var(--hero-background-color);
 }
 .hero-title {
   font-weight: 900;
@@ -83,29 +79,21 @@ a {
 }
 .button-servise-order {
   font-family: inherit;
-  position: absolute;
-  width: 216px;
-  height: 50px;
-  left: 692px;
-  top: 430px;
-
-  background: var(--button-beground-color);
+  background: var(--button-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--text-color);
+  cursor: pointer;
 }
 .button-servise-order:hover,
 .button-servise-order:focus,
 .button-servise-order:active {
-  background-color: var(--accent-button-beground-color);
+  background-color: var(--accent-button-background-color);
 }
 /*--------------- section -----------------*/
 .visually-hidden {
@@ -137,7 +125,6 @@ a {
   color: var(--main-text-color);
 }
 .section-text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -145,10 +132,10 @@ a {
 }
 /*--------------- team -----------------*/
 .section-team {
-  background-color: var(--beground-color);
+  background-color: var(--background-color);
 }
 .team {
-  background-color: var(--main-beground-color);
+  background-color: var(--main-background-color);
 }
 .team-list {
   font-weight: 500;
@@ -159,7 +146,6 @@ a {
   color: var(--main-text-color);
 }
 .team-item {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -167,23 +153,24 @@ a {
   color: var(--title-text-color);
 }
 /*--------------- footer -----------------*/
+.logo-title.footer{
+    color: var(--text-color);
+}
 .footer {
-  background-color: var(--footer-beground-color);
+  background-color: var(--footer-background-color);
 }
 .addres {
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
 .addres-link {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--addres-link-color)
 }
 .addres-link:hover,
 .addres-link:focus {
@@ -199,14 +186,14 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  background: var(--beground-color);
+  background-color: var(--background-color);
   border-radius: 4px;
 }
 .button-filter:hover,
 .button-filter:active,
 .button-filter:focus {
   color: var(--text-color);
-  background-color: var(--accent-button-filtr-beground-color);
+  background-color: var(--accent-button-filter-background-color);
 }
 /*--------------- progects -----------------*/
 /* .progect */
@@ -219,7 +206,6 @@ a {
   color: var(--main-text-color);
 }
 .progect-subtitle {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
