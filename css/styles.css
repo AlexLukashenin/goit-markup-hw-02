@@ -9,8 +9,8 @@
   --button-background-color: #2196f3;
   --accent-button-background-color: #188ce8;
   --accent-button-filter-background-color: #2196f3;
-  --hero-background-color: #2F303A;
-  --addres-link-color:rgba(255, 255, 255, 0.6);
+  --hero-background-color: #2f303a;
+  --addres-link-color: rgba(255, 255, 255, 0.6);
 }
 /*------------------- Добавить остальные цвета */
 body {
@@ -153,8 +153,8 @@ a {
   color: var(--title-text-color);
 }
 /*--------------- footer -----------------*/
-.logo-title.footer{
-    color: var(--text-color);
+.logo-title.footer {
+  color: var(--text-color);
 }
 .footer {
   background-color: var(--footer-background-color);
@@ -170,7 +170,7 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--addres-link-color)
+  color: var(--addres-link-color);
 }
 .addres-link:hover,
 .addres-link:focus {
@@ -188,6 +188,7 @@ a {
   color: var(--main-text-color);
   background-color: var(--background-color);
   border-radius: 4px;
+  cursor: pointer;
 }
 .button-filter:hover,
 .button-filter:active,
